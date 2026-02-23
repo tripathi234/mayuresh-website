@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mayureshji Official</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayureshji Official</title>
+<meta name="description" content="Buy premium Legal Notes, School Branding, Website & Poster Design by Mayureshji. ₹50 Payment via Google Pay. Trusted & easy access.">
+<meta name="keywords" content="Mayuresh website, Legal Notes, CUET Notes, School Branding, Website Design, Poster Design, ₹50 Notes, Google Pay, WhatsApp Payment">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -13,12 +15,14 @@
 <button onclick="adminLogin()">Admin</button>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-<h2>Digital & Legal Empire</h2>
-<p>Website | Legal Notes | School Branding</p>
-<a href="#services" class="btn">Explore</a>
+  <h2 class="fade-in">Digital & Legal Empire</h2>
+  <p class="slide-up">Website | Legal Notes | School Branding</p>
+  <a href="#services" class="btn slide-up-delay">Explore</a>
 </section>
 
+<!-- Services Section -->
 <section id="services">
 <h2>Services</h2>
 <div class="card">Website Design</div>
@@ -26,11 +30,12 @@
 <div class="card">Poster Design</div>
 </section>
 
+<!-- Legal Notes Store -->
 <section id="store">
 <h2>Legal Notes Store</h2>
 <p><strong>Price: ₹50</strong></p>
 
-<a href="upi://pay?pa=mayureshtripathi4-1@okhdfcback&pn=Mayuresh%20Tripathi&am=50&cu=INR" class="btn">
+<a href="upi://pay?pa=mayureshtripathi4-1@okhdfcback&pn=Mayuresh%20Tripathi&am=50&cu=INR" class="btn" onclick="paymentConfirmed()">
 Pay ₹50 via Google Pay
 </a>
 
@@ -39,13 +44,37 @@ Pay ₹50 via Google Pay
 <a href="https://wa.me/917497953708?text=Hello%20Mayureshji%20I%20have%20paid%20₹50%20for%20Legal%20Notes.%20Please%20send%20the%20PDF." class="btn">
 Send Payment Screenshot
 </a>
+
+<!-- Auto PDF Download Link (Hidden initially) -->
+<a id="pdf-link" href="LegalNotes.pdf" class="btn" style="display:none;" download>
+Download PDF
+</a>
 </section>
 
+<!-- Visitor Counter -->
+<section id="visitors">
+<h2>Visitors</h2>
+<p>Total Visitors: <span id="visitor-count">0</span></p>
+</section>
+
+<!-- Contact Section -->
 <section id="contact">
 <h2>Contact</h2>
 <a href="https://wa.me/917497953708" class="btn">WhatsApp</a>
 </section>
 
+<!-- Admin Login Modal -->
+<div id="admin-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAdmin()">&times;</span>
+    <h3>Admin Login</h3>
+    <input type="password" id="admin-password" placeholder="Enter Password">
+    <button onclick="verifyAdmin()">Login</button>
+    <p id="admin-msg" style="color:red;"></p>
+  </div>
+</div>
+
+<!-- Footer -->
 <footer>
 © 2026 Mayureshji
 </footer>
